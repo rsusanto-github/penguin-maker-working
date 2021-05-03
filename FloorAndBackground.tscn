@@ -1,12 +1,7 @@
-[gd_scene load_steps=6 format=2]
-
-[ext_resource path="res://Levels/snowygroundtile.png" type="Texture" id=1]
-[ext_resource path="res://Levels/snowwithtrees.png" type="Texture" id=2]
-[ext_resource path="res://background/bg-icebergs-2@2x.png" type="Texture" id=3]
+[gd_scene load_steps=3 format=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "snowygroundtile.png 0"
-0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 832, 352 )
@@ -22,7 +17,6 @@
 
 [sub_resource type="TileSet" id=2]
 0/name = "snowwithtrees.png 0"
-0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 512, 32, 96, 96 )
@@ -43,7 +37,6 @@ margin_left = -5.1405
 margin_top = -443.827
 margin_right = 3231.86
 margin_bottom = 1719.17
-texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

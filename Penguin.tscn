@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Penguin.gd" type="Script" id=1]
 [ext_resource path="res://CompositeSpritesheets/Body.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://CompositeSpritesheets/Shoes1.png" type="Texture" id=4]
 [ext_resource path="res://CompositeSpritesheets/Clothes1.png" type="Texture" id=5]
 [ext_resource path="res://CompositeSpritesheets/Eye1.png" type="Texture" id=6]
+[ext_resource path="res://bar.png" type="Texture" id=7]
 
 [node name="Penguin" type="Node2D"]
 position = Vector2( 512, -256 )
@@ -39,40 +40,45 @@ scale = Vector2( 10.7238, 9.40962 )
 texture = ExtResource( 4 )
 
 [node name="ChangeHair" type="Button" parent="."]
-margin_left = 147.344
-margin_top = 437.679
-margin_right = 237.344
-margin_bottom = 479.679
+margin_left = 299.344
+margin_top = 400.679
+margin_right = 389.344
+margin_bottom = 442.679
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeEyes" type="Button" parent="."]
-margin_left = 148.0
-margin_top = 494.326
-margin_right = 238.0
-margin_bottom = 536.326
+margin_left = 300.0
+margin_top = 479.326
+margin_right = 390.0
+margin_bottom = 521.326
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeClothes" type="Button" parent="."]
-margin_left = 148.0
-margin_top = 548.0
-margin_right = 238.0
-margin_bottom = 588.0
+margin_left = 301.0
+margin_top = 558.0
+margin_right = 391.0
+margin_bottom = 598.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeShoes" type="Button" parent="."]
-margin_left = 148.944
-margin_top = 599.969
-margin_right = 237.944
-margin_bottom = 637.969
+margin_left = 300.944
+margin_top = 633.969
+margin_right = 389.944
+margin_bottom = 671.969
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="bar" type="Sprite" parent="."]
+position = Vector2( 83, 562 )
+texture = ExtResource( 7 )
+
 [connection signal="pressed" from="ChangeHair" to="." method="_on_ChangeHair_pressed"]
 [connection signal="pressed" from="ChangeEyes" to="." method="_on_ChangeEyes_pressed"]
 [connection signal="pressed" from="ChangeClothes" to="." method="_on_ChangeClothes_pressed"]

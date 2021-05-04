@@ -6,7 +6,7 @@
 [ext_resource path="res://CompositeSpritesheets/Shoes1.png" type="Texture" id=4]
 [ext_resource path="res://CompositeSpritesheets/Clothes1.png" type="Texture" id=5]
 [ext_resource path="res://CompositeSpritesheets/Eye1.png" type="Texture" id=6]
-[ext_resource path="res://bar.png" type="Texture" id=7]
+[ext_resource path="res://IceCube.PNG" type="Texture" id=7]
 [ext_resource path="res://bg-icebergs-1.png" type="Texture" id=8]
 [ext_resource path="res://snowwithtrees.png" type="Texture" id=9]
 
@@ -52,43 +52,59 @@ scale = Vector2( 10.7238, 9.40962 )
 texture = ExtResource( 4 )
 
 [node name="ChangeHair" type="Button" parent="."]
-margin_left = 299.344
-margin_top = 400.679
-margin_right = 389.344
-margin_bottom = 442.679
+margin_left = 300.0
+margin_top = 356.582
+margin_right = 390.0
+margin_bottom = 398.582
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeEyes" type="Button" parent="."]
 margin_left = 300.0
-margin_top = 479.326
+margin_top = 457.546
 margin_right = 390.0
-margin_bottom = 521.326
+margin_bottom = 499.546
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeClothes" type="Button" parent="."]
 margin_left = 301.0
-margin_top = 558.0
+margin_top = 566.0
 margin_right = 391.0
-margin_bottom = 598.0
+margin_bottom = 606.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ChangeShoes" type="Button" parent="."]
 margin_left = 300.944
-margin_top = 633.969
+margin_top = 662.969
 margin_right = 389.944
-margin_bottom = 671.969
+margin_bottom = 700.969
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bar" type="Sprite" parent="."]
-position = Vector2( 83, 562 )
+[node name="IceCube" type="Sprite" parent="."]
+position = Vector2( 342.54, 370.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="IceCube2" type="Sprite" parent="."]
+position = Vector2( 342.54, 481.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="IceCube3" type="Sprite" parent="."]
+position = Vector2( 344.54, 587.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="IceCube4" type="Sprite" parent="."]
+position = Vector2( 342.54, 696.171 )
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 7 )
 
 [connection signal="pressed" from="ChangeHair" to="." method="_on_ChangeHair_pressed"]

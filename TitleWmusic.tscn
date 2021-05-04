@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Title.gd" type="Script" id=1]
+[ext_resource path="res://OpenSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM.jpg" type="Texture" id=3]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=4]
+[ext_resource path="res://Cool.png" type="Texture" id=5]
+[ext_resource path="res://Analog-synthesizer-piano-music-loop-106-bpm.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_color = Color( 0.0784314, 0.321569, 0.835294, 1 )
+font_data = ExtResource( 2 )
+
+[node name="TitleNode" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM" type="Sprite" parent="."]
+position = Vector2( 511.9, 300.83 )
+scale = Vector2( 1.025, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM"]
+margin_left = -156.069
+margin_top = 198.326
+margin_right = 69.9315
+margin_bottom = 301.326
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.0784314, 0.321569, 0.835294, 1 )
+bbcode_enabled = true
+bbcode_text = "[wave] Start"
+text = " Start"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+mouse_out = Color( 0.0784314, 0.321569, 0.835294, 1 )
+mouse_over = Color( 0.0588235, 0.964706, 0.921569, 1 )
+
+[node name="Cool" type="Sprite" parent="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM"]
+position = Vector2( 19.5995, -247.601 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+
+[node name="StartButton" type="Button" parent="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM"]
+show_behind_parent = true
+margin_left = -154.0
+margin_top = 196.0
+margin_right = 65.0
+margin_bottom = 302.0
+keep_pressed_outside = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SynthWinterPiano" type="AudioStreamPlayer" parent="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM"]
+stream = ExtResource( 6 )
+autoplay = true
+
+[connection signal="mouse_entered" from="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM/RichTextLabel" to="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM/RichTextLabel" method="_on_RichTextLabel_mouse_entered"]
+[connection signal="mouse_exited" from="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM/RichTextLabel" to="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM/RichTextLabel" method="_on_RichTextLabel_mouse_exited"]
+[connection signal="pressed" from="beautiful-cartoon-of-penguine-on-blue-background_MJXwh9a__SB_PM/StartButton" to="." method="_on_Button_pressed"]

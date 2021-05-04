@@ -1,0 +1,118 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Penguin.gd" type="Script" id=1]
+[ext_resource path="res://CompositeSpritesheets/Body.png" type="Texture" id=2]
+[ext_resource path="res://CompositeSpritesheets/Hair1.png" type="Texture" id=3]
+[ext_resource path="res://CompositeSpritesheets/Clothes1.png" type="Texture" id=4]
+[ext_resource path="res://CompositeSpritesheets/Eye1.png" type="Texture" id=5]
+[ext_resource path="res://CompositeSpritesheets/Shoes1.png" type="Texture" id=6]
+[ext_resource path="res://snowwithtrees.png" type="Texture" id=7]
+[ext_resource path="res://IceCube.PNG" type="Texture" id=8]
+[ext_resource path="res://bg-icebergs-1.png" type="Texture" id=9]
+[ext_resource path="res://Vivaldi-winter.wav" type="AudioStream" id=10]
+
+[node name="Penguin" type="Node2D"]
+position = Vector2( 511.89, -259 )
+script = ExtResource( 1 )
+
+[node name="bg-icebergs-1" type="Sprite" parent="."]
+position = Vector2( -0.877808, 558.686 )
+scale = Vector2( 0.85, 0.75 )
+texture = ExtResource( 9 )
+
+[node name="snowwithtrees" type="Sprite" parent="bg-icebergs-1"]
+position = Vector2( 1.33917, 158.931 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="CompositeSprites" type="Node" parent="."]
+
+[node name="Body" type="Sprite" parent="CompositeSprites"]
+position = Vector2( 482.669, 415.959 )
+scale = Vector2( 10.7523, 10.1306 )
+texture = ExtResource( 2 )
+
+[node name="Hair" type="Sprite" parent="CompositeSprites"]
+position = Vector2( 482.695, 413.574 )
+scale = Vector2( 10.9262, 9.62713 )
+texture = ExtResource( 3 )
+
+[node name="Eye" type="Sprite" parent="CompositeSprites"]
+position = Vector2( 463.55, 450.616 )
+scale = Vector2( 16.4143, 15.0436 )
+texture = ExtResource( 5 )
+
+[node name="Clothes" type="Sprite" parent="CompositeSprites"]
+position = Vector2( 481.298, 411.032 )
+scale = Vector2( 10.588, 11.7029 )
+texture = ExtResource( 4 )
+
+[node name="Shoes" type="Sprite" parent="CompositeSprites"]
+position = Vector2( 482.703, 422.575 )
+scale = Vector2( 10.7238, 9.40962 )
+texture = ExtResource( 6 )
+
+[node name="ChangeHair" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 356.582
+margin_right = 390.0
+margin_bottom = 398.582
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeEyes" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 457.546
+margin_right = 390.0
+margin_bottom = 499.546
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeClothes" type="Button" parent="."]
+margin_left = 301.0
+margin_top = 566.0
+margin_right = 391.0
+margin_bottom = 606.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeShoes" type="Button" parent="."]
+margin_left = 300.944
+margin_top = 662.969
+margin_right = 389.944
+margin_bottom = 700.969
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IceCube" type="Sprite" parent="."]
+position = Vector2( 342.54, 370.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="IceCube2" type="Sprite" parent="."]
+position = Vector2( 342.54, 481.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="IceCube3" type="Sprite" parent="."]
+position = Vector2( 344.54, 587.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="IceCube4" type="Sprite" parent="."]
+position = Vector2( 342.54, 696.171 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="VivWinter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[connection signal="pressed" from="ChangeHair" to="." method="_on_ChangeHair_pressed"]
+[connection signal="pressed" from="ChangeEyes" to="." method="_on_ChangeEyes_pressed"]
+[connection signal="pressed" from="ChangeClothes" to="." method="_on_ChangeClothes_pressed"]
+[connection signal="pressed" from="ChangeShoes" to="." method="_on_ChangeShoes_pressed"]

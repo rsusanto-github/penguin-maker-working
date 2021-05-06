@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hair.png-a9c7061082ab8b98d8670acd96dd52f6.stex"
+path="res://.import/chain_boots.png-03bad89043d2bda9ac98caf0ba551dbc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hair.png"
-dest_files=[ "res://.import/hair.png-a9c7061082ab8b98d8670acd96dd52f6.stex" ]
+source_file="res://chain_boots.png"
+dest_files=[ "res://.import/chain_boots.png-03bad89043d2bda9ac98caf0ba551dbc.stex" ]
 
 [params]
 

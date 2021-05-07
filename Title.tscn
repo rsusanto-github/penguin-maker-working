@@ -5,7 +5,7 @@
 [ext_resource path="res://OpenSans-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Cool.png" type="Texture" id=4]
 [ext_resource path="res://Title.gd" type="Script" id=5]
-[ext_resource path="res://Analog-synthesizer-piano-music-loop-106-bpm.wav" type="AudioStream" id=6]
+[ext_resource path="res://Analog-synthesizer-piano-music-loop-106-bpm (1).wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -54,8 +54,6 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 240.912, 282.354 )
-scale = Vector2( 0.809646, 0.515654 )
 stream = ExtResource( 6 )
 autoplay = true
 
